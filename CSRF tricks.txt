@@ -1,0 +1,23 @@
+# CSRF-tricks
+Some CSRF protection bypass tricks
+
+
+%%%%%%%%%%%%%%%%  CSRF  %%%%%%%%%%%%%%%
+
+## Attack on those functions of sites which doesn't contain the password protection.
+
+%% Bypass CSRF protection:
+
+1) Clickjacking
+
+2) change the request method from GET to POST
+
+3) Delete the CSRF token in request
+
+4) change the CSRF token to attackers CSRF token
+
+5) some times the CSRF toke in present in COOKIE also as double check, so change the CSRF token from both the place to FAKE CSRF token.
+
+6) Remove Referer Header from your POC execution request. (MAY be the server check for Referer header)
+
+7) OR change the referer Header to eg: bank.com.attacker.com or attacker.com/bank.com etc.  
