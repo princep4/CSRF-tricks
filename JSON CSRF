@@ -1,0 +1,17 @@
+%% JSON CSRF:
+
+1) change the content Type
+    from: application/json   to: text/plain
+   
+    If no error in the response then send JSON data as
+    
+    <form action="URL" method="post" enctype="text/plain">
+      <input type="text" name='{//// JSON ///}' />
+      <input type="submit" name="submit" />
+    </form>
+
+
+2) If first not works:
+    
+    Change the content type: application/X-www-form-urlencoded
+    and send the values as HTML tags
